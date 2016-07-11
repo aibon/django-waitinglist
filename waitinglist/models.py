@@ -88,7 +88,7 @@ class SurveyQuestion(models.Model):
     ]
     
     survey = models.ForeignKey(Survey, related_name="questions")
-    question = models.TextField()
+    question = models.CharField(max_length=500)
     kind = models.IntegerField(choices=FIELD_TYPE_CHOICES)
     help_text = models.TextField(blank=True)
     ordinal = models.IntegerField(blank=True)
